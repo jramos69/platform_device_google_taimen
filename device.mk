@@ -150,5 +150,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_gl_app_phase_offset_ns=15000000
 
+# Override AOSP build properties
+PRODUCT_STSTEM_NAME := taimen
+PRODUCT_SYSTEM_DEVICE := taimen
+PRODUCT_SYSTEM_BRAND := google
+PRODUCT_SYSTEM_MODEL := Pixel 2 XL
+PRODUCT_SYSTEM_MANUFACTURER := Google
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="taimen" \
+    TARGET_DEVICE="taimen" \
+    PRIVATE_BUILD_DESC="taimen-user 10 QP1A.191105.004 5908170 release-keys"
+
+BUILD_FINGERPRINT := "google/taimen/taimen:10/QP1A.191105.004/5908170:user/release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=google/taimen/taimen:10/QP1A.191205.008/5908170:user/release-keys
+    ro.build.flavor=taimen-user
+
 $(call inherit-product-if-exists, vendor/google/taimen/taimen-vendor.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
