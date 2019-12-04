@@ -130,6 +130,14 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   persist.config.calibration_fac=/persist/sensors/calibration/calibration.xml
 
+# For bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/bootanimation-dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+
+# For bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+
 # Vibrator HAL
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.vibrator.hal.click.duration=10 \
